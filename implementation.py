@@ -24,6 +24,7 @@ def display_fruits(collection_of_fruit):
     """
     for fruit in collection_of_fruit:
         print(fruit)
+
 #display_fruits(a_set_of_fruits)
 
 
@@ -55,10 +56,38 @@ def display_profile(user_information):
     print(f"{user_information['First Name']}" + " " + f"{user_information['Last Name']}")
     print(f"{user_information['Email Address']}" + "\n" + f"{user_information['Phone Number']}")
 
-display_profile(user_walloch)
+#display_profile(user_walloch)
 
 
 
 
 
 #List of Dictionaries
+my_immediate_family = [
+    {
+        "first name" : "Robert",
+        "last name" :   "Walloch",
+        "relation"  :   "father"
+    },
+    {
+        "first name" : "Rose",
+        "last name" :   "Walloch",
+        "relation"  :   "mother"
+    },
+    {
+        "first name" : "Katelyn",
+        "last name" :   "Walloch",
+        "relation"  :   "sister"
+    }
+]
+
+def introduce_family(family_memebrs):
+    """
+    Parameter:
+    family_members : list of dictionaries -> The members who's info will be printed
+    Prints to console: the first name and relation for each member
+    """
+    for member in range(len(family_memebrs)):
+        print(f"{(family_memebrs[member])['first name']} is my {(family_memebrs[member])['relation']}")
+
+introduce_family(my_immediate_family)
