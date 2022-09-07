@@ -1,93 +1,34 @@
 #Dictionary, Set and Tuple
-
-#Tuple
-months_of_the_year = (
-    "January", "February", "March", "April",
-     "May", "June", "July", "August", 
-     "September", "October", "November", "December"
-     )
-#print(months_of_the_year[(int(3.14) - 1)])
+from year import Year
+from fruits import FruitBasket
+from users import UserProfile
+from family import FamilyMember
 
 
-#Set
-a_set_of_fruits = {"Banana", "Blueberry", "Raspberry", "Pear", "Orange"}
+#Tuple - Refer to year module
+p = Year()
+#p.find_pi_day()
 
-a_set_of_fruits.add("Apple")
-a_set_of_fruits.add("Watermelon")
-
-def display_fruits(collection_of_fruit):
-    """
-    Parameter:
-    A colllection : {} or [] -> Any iterable collection, primarily fruit
-    
-    Prints to the console
-    """
-    for fruit in collection_of_fruit:
-        print(fruit)
-
-#display_fruits(a_set_of_fruits)
+#Set - Refer to fruits module
+fb = FruitBasket()
+# fb.add_fruit("Apple")
+# fb.add_fruit("Watermelon")
+# fb.display_fruits()
 
 
-#Dictionary
-def create_user(first_name, last_name, email, phone):
-    """
-    Pararmeter:
-    Takes str of First name, Last name, email, and phone number
-
-    Returns
-    user_info in the form of a dictionary
-    """
-    user_info = {
-        "First Name" : first_name,
-        "Last Name" : last_name,
-        "Email Address" : email,
-        "Phone Number" : phone
-    }
-    return user_info
-
-user_walloch = (create_user("Matthew", "Walloch", "matthewrwalloch@gmail.com", "999-999-9999"))
-#your_user = (create_user())
-
-def display_profile(user_information):
-    """
-    Parameter:
-    user_information : variable = create_user() -> The user who's info you want to print
-    """
-    print(f"{user_information['First Name']}" + " " + f"{user_information['Last Name']}")
-    print(f"{user_information['Email Address']}" + "\n" + f"{user_information['Phone Number']}")
-
-#display_profile(user_walloch)
-
-
+#Dictionary - Refer to users module
+u_mw = UserProfile("Matthew", "Walloch", "matthewrwalloch@gmail.com", "999-999-9999")
+#u_mw.display_profile()
 
 
 
 #List of Dictionaries
-my_immediate_family = [
-    {
-        "first name" : "Robert",
-        "last name" :   "Walloch",
-        "relation"  :   "father"
-    },
-    {
-        "first name" : "Rose",
-        "last name" :   "Walloch",
-        "relation"  :   "mother"
-    },
-    {
-        "first name" : "Katelyn",
-        "last name" :   "Walloch",
-        "relation"  :   "sister"
-    }
-]
+my_family = {
+    "1" : FamilyMember("Robert", "Walloch", "father"),
+    "2" : FamilyMember("Rose", "Walloch", "mother"),
+    "3" : FamilyMember("Katelyn", "Walloch", "sister")
+}
 
-def introduce_family(family_memebrs):
-    """
-    Parameter:
-    family_members : list of dictionaries -> The members who's info will be printed
-    Prints to console: the first name and relation for each member
-    """
-    for member in range(len(family_memebrs)):
-        print(f"{(family_memebrs[member])['first name']} is my {(family_memebrs[member])['relation']}")
-
-introduce_family(my_immediate_family)
+# for key, value in my_family.items():
+#     my_family[key].introduce_family()
+    
