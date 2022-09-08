@@ -8,7 +8,7 @@ class FruitBasket:
         Parameter:
         more_fruit : str -> string is added to the set
         """
-        self.fruits.add(more_fruit)
+        self.fruits.add({more_fruit})
 
 
     def display_fruits(self):
