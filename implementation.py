@@ -1,16 +1,18 @@
 #Dictionary, Set and Tuple
+from logging import root
 from year import Year
 from fruits import FruitBasket
 from users import UserProfile
 from family import FamilyMember
 from linked_list import LinkedList
+from binary_node import BinaryNode
 
 #Tuple - Refer to year module
-p = Year()
+#p = Year()
 #p.find_pi_day()
 
 #Set - Refer to fruits module
-fb = FruitBasket()
+#fb = FruitBasket()
 
 # fb.add_fruit("Apple")
 # fb.add_fruit("Watermelon")
@@ -18,7 +20,7 @@ fb = FruitBasket()
 
 
 #Dictionary - Refer to users module
-u_mw = UserProfile("Matthew", "Walloch", "matthewrwalloch@gmail.com", "999-999-9999")
+#u_mw = UserProfile("Matthew", "Walloch", "matthewrwalloch@gmail.com", "999-999-9999")
 #u_mw.display_profile()
 
 
@@ -33,12 +35,21 @@ my_family = {
 # for key, value in my_family.items():
 #     my_family[key].introduce_family()
     
-my_linked_list = LinkedList()
-my_linked_list.append_node(20)
-my_linked_list.append_node(30)
-my_linked_list.append_node(40)
-my_linked_list.append_node(50)
-my_linked_list.append_node(60)
 
-my_linked_list.find_node(123)
-my_linked_list.find_node(40)
+
+#my_linked_list = LinkedList()
+# my_linked_list.append_node(20)
+# my_linked_list.append_node(30)
+# my_linked_list.append_node(40)
+# my_linked_list.append_node(50)
+# my_linked_list.append_node(60)
+
+# print(my_linked_list.find_node(123))
+# print(my_linked_list.find_node(40))
+
+tree = BinaryNode(27)
+tree.insert_node(14)
+tree.insert_node(40)
+tree.insert_node(35)
+tree.insert_node(45)
+tree.insert_node(1)

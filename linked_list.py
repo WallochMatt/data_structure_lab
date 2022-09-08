@@ -26,9 +26,8 @@ class LinkedList:
         current_node = self.head
         while current_node is not None: #while ointer is not the tail
             if current_node.value == search_value:
-                return print("True")
+                return True
             else:
                 current_node = current_node.pointer    
-        return print("False")
-
+        return False
 
