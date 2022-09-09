@@ -1,5 +1,3 @@
-from hmac import new
-
 
 class BinaryNode:
     def __init__(self, data):
@@ -25,10 +23,27 @@ class BinaryNode:
             return self.left.insert_node(data)
             #self.left = self.left.insert_node(data)
             #return new_node
-        
-        print(f"Node with data {data} created")
-        print(f"Node {self.data} updated with a left {self.left} and a right of {self.right}")
-        #return new_node
+        self.text_checker(data, self.data, self.left, self.right)
+
+    def text_checker(self, data, self_data, left_data, right_data):
+        if right_data is None:
+            right_data = "None"
+        else:
+            right_data = right_data.data
+        if left_data is None:
+            left_data = "None"
+        else:
+            left_data = left_data.data
+
+        print("\n" + f"Node with data {data} created")
+        print(f"""Node {self_data} updated with a left {left_data} and a right of {right_data}""")
+
+
+
+
+
+
+
 
     def search_for_node(self, value_searching_for):
         pass

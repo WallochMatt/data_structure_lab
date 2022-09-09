@@ -31,3 +31,17 @@ class LinkedList:
                 current_node = current_node.pointer    
         return False
 
+"""
+In class example for recursion refactor:
+
+def find_node_recursively(self, current_node, value)
+    if current_node:
+        if currenet_node.value == value:
+            return True
+        else:
+            return self.find_node_recursive(current_node.next, value)
+    return False
+
+
+print(find_node_recursively(current_node, value))  
+"""

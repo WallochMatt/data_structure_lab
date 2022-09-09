@@ -26,11 +26,11 @@ from binary_node import BinaryNode
 
 
 #List of Dictionaries
-my_family = {
-    "1" : FamilyMember("Robert", "Walloch", "father"),
-    "2" : FamilyMember("Rose", "Walloch", "mother"),
-    "3" : FamilyMember("Katelyn", "Walloch", "sister")
-}
+# my_family = {
+#     "1" : FamilyMember("Robert", "Walloch", "father"),
+#     "2" : FamilyMember("Rose", "Walloch", "mother"),
+#     "3" : FamilyMember("Katelyn", "Walloch", "sister")
+# }
 
 # for key, value in my_family.items():
 #     my_family[key].introduce_family()
