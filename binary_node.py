@@ -40,12 +40,22 @@ class BinaryNode:
 
 
 
+    def search_for_node(self, root, value_searching_for):
+        current_node = root
+        print("\n" + f"Searching for node with a value of {value_searching_for}")
+        while current_node is not None:
+        #if current_node:
+            if current_node.data == value_searching_for:
+                print("Results:")
+                return True
+                
+            elif current_node.data < value_searching_for:
+                current_node = current_node.right
+                print("Searching right...")
+            
+            elif current_node.data > value_searching_for:
+                current_node = current_node.left
+                print("Searching left...")
 
-
-
-
-
-    def search_for_node(self, value_searching_for):
-        pass
-
-#
+        print("Results:")
+        return False

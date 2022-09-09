@@ -37,6 +37,7 @@ from binary_node import BinaryNode
     
 
 
+#Linked List
 #my_linked_list = LinkedList()
 # my_linked_list.append_node(20)
 # my_linked_list.append_node(30)
@@ -47,9 +48,14 @@ from binary_node import BinaryNode
 # print(my_linked_list.find_node(123))
 # print(my_linked_list.find_node(40))
 
-tree = BinaryNode(27)
-tree.insert_node(14)
-tree.insert_node(40)
-tree.insert_node(35)
-tree.insert_node(45)
-tree.insert_node(1)
+
+#BST
+root = BinaryNode(27)
+root.insert_node(14)
+root.insert_node(40)
+root.insert_node(35)
+root.insert_node(45)
+root.insert_node(1)
+
+print(root.search_for_node(root, 35))
+print(root.search_for_node(root, 13))
